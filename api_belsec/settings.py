@@ -15,6 +15,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+import os
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -109,8 +110,13 @@ AUTH_PASSWORD_VALIDATORS = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',  # Adicione todas as origens que deseja permitir aqui
     'https://example.com',    # Por exemplo, se estiver usando HTTPS
-    # Adicione outras origens conforme necessário
 ]
+
+# Defina a URL base para os arquivos de mídia
+MEDIA_URL = '/media/'
+
+# Defina o diretório onde os arquivos de mídia serão armazenados
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
