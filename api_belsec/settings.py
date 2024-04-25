@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Libs
     'rest_framework',
+    'corsheaders',
     # apps
     'app'
 ]
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # cors
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'api_belsec.urls'
@@ -103,6 +106,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',  # Adicione todas as origens que deseja permitir aqui
+    'https://example.com',    # Por exemplo, se estiver usando HTTPS
+    # Adicione outras origens conforme necessário
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
