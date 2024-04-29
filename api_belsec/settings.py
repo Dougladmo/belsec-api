@@ -110,6 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',  # Adicione todas as origens que deseja permitir aqui
     'https://example.com',    # Por exemplo, se estiver usando HTTPS
+    'https://bel-sec.vercel.app',
 ]
 
 # Defina a URL base para os arquivos de mídia
